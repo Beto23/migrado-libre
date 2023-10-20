@@ -15,7 +15,7 @@ His son Ángel, who is a programmer, informed him that Mercado Libre offers an o
 ## Requirements
 
 - [x] Upon visiting the `/` route, we should see a grid-style list of all of Miguel's products.
-- [ ] When visiting the `/[category_id]` route, we should see a list of products corresponding to that category.
+- [x] When visiting the `/[category_id]` route, we should see a list of products corresponding to that category.
 - [ ] On all routes, there should be a menu on the left displaying available categories. Categories should be displayed in a tree-like structure, meaning that if a category has subcategories, they should appear as a submenu.
 - [ ] Categories should start in a collapsed state, and clicking a `-` or `+` button should expand or collapse them individually.
 - [ ] Categories should retain their expansion/collapse state when navigating between routes.

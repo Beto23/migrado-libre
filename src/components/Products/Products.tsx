@@ -1,9 +1,14 @@
 "use client";
+import Link from "next/link";
 
 import { useGetProducts } from "../../hooks";
 
-export default function Products() {
-  const { isLoading, data } = useGetProducts();
+interface ProductsProps {
+  category?: string;
+}
+
+export default function Products({ category }: ProductsProps) {
+  const { isLoading, data } = useGetProducts(category);
 
   if (isLoading) return <p>Cargando articulos...</p>;
 
@@ -27,6 +32,7 @@ export default function Products() {
               style: "currency",
             })}
           </strong>
+          {!category && <Link href={`/${product.category_id}`}>Categoria</Link>}
         </div>
       ))}
     </div>
