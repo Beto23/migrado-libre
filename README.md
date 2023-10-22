@@ -20,7 +20,7 @@ His son Ángel, who is a programmer, informed him that Mercado Libre offers an o
 - [x] Categories should start in a collapsed state, and clicking a `-` or `+` button should expand or collapse them individually.
 - [x] Categories should retain their expansion/collapse state when navigating between routes.
 - [x] Clicking on a category should navigate to the corresponding `/[category_id]` route.
-- [ ] Clicking on a product should redirect us to the Mercado Libre page for that product.
+- [x] Clicking on a product should redirect us to the Mercado Libre page for that product.
 
 ## Example
 ![Example](./assets/mock.png)

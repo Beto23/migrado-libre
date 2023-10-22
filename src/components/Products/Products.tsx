@@ -23,14 +23,16 @@ export default function Products({ category }: ProductsProps) {
     <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-4">
       {data.map((product) => (
         <div key={product.id}>
-          <img alt="" src={product.thumbnail} />
-          <p>{product.title}</p>
-          <strong>
-            {product.price.toLocaleString("es-AR", {
-              currency: product.currency_id,
-              style: "currency",
-            })}
-          </strong>
+          <a href={product.permalink} rel="noopener" target="_blank">
+            <img alt="" src={product.thumbnail} />
+            <p>{product.title}</p>
+            <strong>
+              {product.price.toLocaleString("es-AR", {
+                currency: product.currency_id,
+                style: "currency",
+              })}
+            </strong>
+          </a>
         </div>
       ))}
     </div>
