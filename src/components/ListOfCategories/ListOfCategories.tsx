@@ -1,6 +1,7 @@
 "use client";
 import type { Category } from "@/models";
 
+import Link from "next/link";
 import { useState } from "react";
 
 interface ListOfCategoriesProps {
@@ -24,7 +25,7 @@ function CategoryItem({ category, categories }: { category: Category; categories
           {showSubCategories ? "-" : "+"}
         </button>
       )}
-      {category.name}{" "}
+      <Link href={`/${category.id}`}>{category.name} </Link>
       {showSubCategories ? (
         <ListOfCategories categories={categories} parentCategory={category.id} />
       ) : null}

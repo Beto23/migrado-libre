@@ -13,7 +13,7 @@ export const useGetProducts = (category: string | undefined = undefined) => {
   if (category) url.searchParams.append("category", category);
 
   return useQuery<Products>({
-    queryKey: ["products"],
+    queryKey: category ? ["products-category"] : ["products"],
     queryFn: () =>
       fetch(url)
         .then((res) => res.json())

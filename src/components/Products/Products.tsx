@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 
 import { useGetProducts } from "../../hooks";
 
@@ -32,7 +31,6 @@ export default function Products({ category }: ProductsProps) {
               style: "currency",
             })}
           </strong>
-          {!category && <Link href={`/${product.category_id}`}>Categoria</Link>}
         </div>
       ))}
     </div>
